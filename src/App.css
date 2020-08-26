@@ -1,0 +1,77 @@
+body {
+    background-color: #C4C4C4
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+}
+
+
+#intro {
+    padding-top: 100px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url("./images/FindExpert.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 75%;
+    position: relative;
+    left: 12.5%;
+    background-color: #E5E5E5;
+    box-shadow: 2px 2px rgb(107, 107, 107);
+}
+
+#about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding-top: 100px;
+    width: 75%;
+    left: 12.5%;
+    background-color: #E5E5E5;
+    box-shadow: 2px 2px rgb(107, 107, 107);
+}
+
+.signupForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#signup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding-top: 100px;
+    height: 750px;
+    width: 75%;
+    left: 12.5%;
+    background-color: #E5E5E5;
+    box-shadow: 2px 2px rgb(107, 107, 107);
+}
+
+#login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding-top: 100px;
+    height: 750px;
+    width: 75%;
+    left: 12.5%;
+    background-color: #E5E5E5;
+    box-shadow: 2px 2px rgb(107, 107, 107);
+}
