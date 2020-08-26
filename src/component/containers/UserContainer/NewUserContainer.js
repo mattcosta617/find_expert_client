@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import UserModel from '../../..//model/user';
 // import UserList from '../../Lists/UserList/UserList';
 import axios from 'axios';

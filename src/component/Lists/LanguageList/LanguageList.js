@@ -19,7 +19,7 @@ class LanguageList extends Component {
     render() {
         let languages = this.state.languages;
         const result = languages.map((language) => {
-            return  <Link to="/languages/:${language._id}">
+            return  <Link to={`/languages/${language._id}`}>
                         <div>
                             <h2>{language.language}</h2>
                             <p>{language._id}</p>

@@ -1,5 +1,5 @@
 import React from 'react';
-import UserContainer from '../containers/UserContainer/NewUserContainer';
+import UserContainer from '../../containers/UserContainer/NewUserContainer';
 
 
 function Signup() {

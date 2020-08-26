@@ -19,7 +19,7 @@ class ExpertList extends Component {
     render() {
         let experts = this.state.experts;
         const result = experts.map((expert) => {
-            return  <Link to="/experts/:${expert._id}">
+            return  <Link to={`/experts/${expert._id}/`}>
                         <div>
                             <h2>{expert.first_name}</h2>
                             <h2>{expert.last_name}</h2>

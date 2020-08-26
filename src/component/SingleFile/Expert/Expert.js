@@ -16,9 +16,14 @@ class Expert extends React.Component {
             .catch((err) => console.log(err))
     }
     render() {
+        let expert = this.state.expert;
         console.log(this.props);
+        console.log(expert)
     return (
-        <h1>Experts Page</h1>
+        <div>
+            <h1>Experts Page</h1>
+            <h3>{expert}</h3>
+        </div>
         )
     }
 }
