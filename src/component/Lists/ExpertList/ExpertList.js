@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 
 
+
 class ExpertList extends Component {
     state = {
         experts: [],
@@ -20,7 +21,7 @@ class ExpertList extends Component {
         let experts = this.state.experts;
         const result = experts.map((expert) => {
             return  <Link to={`/experts/${expert._id}/`}>
-                        <div>
+                        <div key={expert._id}>
                             <h2>{expert.first_name}</h2>
                             <h2>{expert.last_name}</h2>
                             <h2>{expert.bio}</h2>

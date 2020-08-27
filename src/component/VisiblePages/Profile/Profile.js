@@ -9,11 +9,13 @@ function Profile() {
     
 
     return(
-        <div className="">
+    
+        <div id="profile">
             <section>
                 <h4>Expert Page</h4>
                 <ExpertList />
-                <UserList />                    {/* <Expert /> */}
+                <UserList />                    
+                {/* <Expert /> */}
             </section>
         </div>
     )

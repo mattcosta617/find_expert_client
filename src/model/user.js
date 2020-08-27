@@ -1,4 +1,4 @@
-const url = `http://localhost:5000/api/v1/users`
+const url = 'http://localhost:5000/api/v1/users/';
 
 class UserModel {
     static getAllUsers = () => {
@@ -12,7 +12,7 @@ class UserModel {
     }
 
     static createUser = (user) => {
-        return fetch(url, {
+        return fetch(`${url}register`, {
             method: 'POST',
             header: {
                 'Content-Type': 'application/json',

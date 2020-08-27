@@ -12,6 +12,7 @@ li {
 
 #navigation {
     display: flex;
+    flex-direction: row;
     width: 25%;
 }
 

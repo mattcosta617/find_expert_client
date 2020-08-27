@@ -1,8 +1,11 @@
 import React from 'react';
+import LoginContainer from '../../containers/LoginContainer/LoginContainer'
 
 function Login() {
     return (
-        <h1 id="login">Login</h1>
+        <div id="login">
+            <LoginContainer />
+        </div>
     )
 }
 

@@ -15,6 +15,7 @@ class NavBar extends Component {
             <NavLink to="/" className="brand-logo homeNavigation" activeClassName="active">Find An Expert</NavLink>
             <ul id="nav-mobile" className="right hide-on-med-and-down">
                 <li className="navClass"><NavLink to="/#about">About</NavLink></li>
+                <li className="navClass"><NavLink to="/experts">Experts</NavLink></li>
                 <li className="navClass"><NavLink to="/languages" activeClassName="active">Languages</NavLink></li>
                 <li className="navClass"><NavLink to="/profile" activeClassName="active">Profile</NavLink></li>
             </ul>         

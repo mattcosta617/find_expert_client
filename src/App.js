@@ -8,7 +8,7 @@ import NavBar from './component/VisiblePages/NavBar/NavBar';
 import './App.css';
 
 function App(props) {
-  console.log(props)
+  // console.log(props)
   return (
     <div className="App">
       <NavBar />

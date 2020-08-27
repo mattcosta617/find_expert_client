@@ -10,7 +10,7 @@ import Expert from '../component/VisiblePages/ExpertsAll/ExpertsAll';
 export default (
     <Switch>
         <Route exact path="/" component={Home}/>
-        <Route exact path="/profile/:id" component={Profile} />
+        <Route exact path="/profile/" component={Profile} />
         <Route exact path="/languages" component={Languages} />
         <Route path="/profile/:id/edit" component={EditProfile} />
         <Route path="/languages/:id" component={Language} />
