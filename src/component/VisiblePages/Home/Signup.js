@@ -1,11 +1,12 @@
 import React from 'react';
-import UserContainer from '../../containers/UserContainer/NewUserContainer';
+import NewUserContainer from '../../containers/UserContainer/NewUserContainer';
 
 
-function Signup() {
+function Signup(props) {
+    console.log(props)
     return (
         <div id="signup">
-            <UserContainer />
+            <NewUserContainer setCurrentUser={props.setCurrentUser} currentUser={props.currentUser} />
         </div>
     )
 }

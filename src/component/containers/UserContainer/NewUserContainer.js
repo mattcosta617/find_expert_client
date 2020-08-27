@@ -79,13 +79,14 @@ export default class NewUserContainer extends Component {
         try{
             const data = await UserModel.createUser(this.state)
             if(data) {
-                this.setState({
-                username: '',
-                email: '',
-                password: ''
-            })
-
-            this.props.history.push("/login")
+                this.props.setCurrentUser(data.data.token)
+            //     this.setState({
+            //     username: '',
+            //     email: '',
+            //     password: ''
+            // })
+            
+            this.props.history.push('/login');
             }
         } catch (err){console.log(err)}
     

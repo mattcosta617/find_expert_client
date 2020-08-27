@@ -1,18 +1,18 @@
 import React from 'react';
 import Intro from './Intro';
 import About from './About';
-import Login from './Login';
 import Signup from './Signup';
 
 
 
-const Home = () => {
+const Home = (props) => {
     return (
         <div id="home">
-            <Intro />
-            <About />
-            <Login />
-            <Signup />
+            <section>
+                <Intro />
+                <About />
+                <Signup setCurrentUser={props.setCurrentUser} currentUser={props.currentUser}/>
+            </section>
         </div>
     )
 }

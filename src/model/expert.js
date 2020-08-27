@@ -1,7 +1,8 @@
+import axios from "axios";
 const url = 'http://localhost:5000/api/v1/experts'
 
 class ExpertModel {
-    
+
     static getAllExperts = () => {
         return fetch(url)
         .then((response) => response.json())

@@ -16,6 +16,15 @@ a:active {
     color: rgb(34, 34, 34);
 }
 
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 150px;
+}
+
 #home {
     display: flex;
     flex-direction: column;

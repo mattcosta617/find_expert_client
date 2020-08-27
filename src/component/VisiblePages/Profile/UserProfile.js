@@ -10,10 +10,11 @@ class UserProfile extends React.Component {
     }
 
     componentDidMount() {
-        UserModel.getUserById(this.props.match.params.id)
+        console.log("above user model")
+        UserModel.verifyUser(this.props.match.params.id)
             // .then((response) => response.json())
             .then((result) => {
-                console.log(result);
+                console.log(result, "This is line 16**********")
                 this.setState({user: result});
             })
             .catch((err) => console.log(err))
@@ -22,14 +23,16 @@ class UserProfile extends React.Component {
 
 
     render() {
-        let user = this.state.user;
+        let user = this.props.match.params.id;
+        console.log(this.state);
+        console.log(user);
         return (
-            <div>
+            <div className="main">
                 <h1>Hello, This is the user page</h1>
                     <h3>{user.username}</h3>
                     <h3>{user.email}</h3>
                     <h3>{user._id}</h3>
-                    <button><Link to={`/profile/${user._id}/edit`}>Edit Profile</Link></button>
+                    <button><Link to={`/profile/edit`}>Edit Profile</Link></button>
             </div>
         )
 

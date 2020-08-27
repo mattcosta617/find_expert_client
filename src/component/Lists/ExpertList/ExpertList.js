@@ -4,8 +4,6 @@ import ExpertModel from '../../../model/expert';
 import { Link } from 'react-router-dom';
 
 
-
-
 class ExpertList extends Component {
     state = {
         experts: [],

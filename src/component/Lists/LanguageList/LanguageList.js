@@ -21,8 +21,8 @@ class LanguageList extends Component {
         const result = languages.map((language) => {
             return  <Link to={`/languages/${language._id}`}>
                         <div>
-                            <h2 key={language._id}>{language.language}</h2>
-                            <p key={language._id}>{language._id}</p>
+                            <h2 key={language.language}>{language.language}</h2>
+                            <p key= {language._id}>{language._id}</p>
                         </div>
                     </Link>
 
@@ -30,7 +30,9 @@ class LanguageList extends Component {
 
         return (
             <div id="languageList">
-                {result}
+                <section className="main">
+                    {result}
+                </section>
             </div>
         )
     }

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 // import axios from 'axios';
 import UserModel from '../../../model/user';
+import { withRouter } from 'react-router-dom';
 
-export default class LoginContainer extends Component {
+class LoginContainer extends Component {
     constructor(props) {
         super(props);
 
@@ -27,19 +28,18 @@ export default class LoginContainer extends Component {
         try{
             const data = await UserModel.login(this.state)
             console.log(data);
+            console.log(this.props)
             if(data) {
                 this.props.setCurrentUser(data.data.token)
-                this.setState({
-                username: '',
-                email: '',
-                password: ''
-            })
+            //     this.setState({
+            //     username: '',
+            //     email: '',
+            //     password: ''
+            // })
+            this.props.history.push('/profile/:id');
 
-            this.props.history.push("/profile")
-            }
-        } catch (err){console.log(err)}
-    
         }
+    } catch (err) {console.log(err)}}
 
 
     render() {
@@ -66,3 +66,6 @@ export default class LoginContainer extends Component {
                 )
             }
 };
+
+
+export default withRouter(LoginContainer);

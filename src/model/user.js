@@ -9,10 +9,15 @@ class UserModel {
 
     static login = (user) => {
         return axios.post(`${url}login`, user)
+        // .then((response) => response.json())
     }
 
     static createUser = (user) => {
         return axios.post(`${url}register`, user);
+    }
+
+    static verifyUser = (user) => {
+        return axios.post(`${url}verify`, user);
     }
 }
 
