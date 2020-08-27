@@ -13,11 +13,10 @@ class NavBar extends Component {
         <nav>
             <div className="nav-wrapper">
             <NavLink to="/" className="brand-logo homeNavigation" activeClassName="active">Find An Expert</NavLink>
-            <ul id="nav-mobile" className="right hide-on-med-and-down">
-                <li className="navClass"><NavLink to="/#about">About</NavLink></li>
-                <li className="navClass"><NavLink to="/experts">Experts</NavLink></li>
-                <li className="navClass"><NavLink to="/languages" activeClassName="active">Languages</NavLink></li>
-                <li className="navClass"><NavLink to="/profile" activeClassName="active">Profile</NavLink></li>
+            <ul className="rightNav">
+            <NavLink to="/experts"><li className="navClass">Experts</li></NavLink>
+            <NavLink to="/languages" activeClassName="active"><li className="navClass">Languages</li></NavLink>
+            <NavLink to="/profile" activeClassName="active"><li className="navClass">Profile</li></NavLink>
             </ul>         
         </div> 
        </nav>

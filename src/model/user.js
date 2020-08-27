@@ -1,3 +1,4 @@
+import axios from "axios";
 const url = 'http://localhost:5000/api/v1/users/';
 
 class UserModel {
@@ -6,20 +7,12 @@ class UserModel {
         .then((response) => response.json())
     }
 
-    static getUserById = (userId) => {
-        return fetch(`${url}/${userId}`)
-        .then((response) => response.json())
+    static login = (user) => {
+        return axios.post(`${url}login`, user)
     }
 
     static createUser = (user) => {
-        return fetch(`${url}register`, {
-            method: 'POST',
-            header: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(user)
-        })
-        .then((response) => response.json())
+        return axios.post(`${url}register`, user);
     }
 }
 

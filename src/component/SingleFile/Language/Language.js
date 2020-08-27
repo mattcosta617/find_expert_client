@@ -9,7 +9,7 @@ class Language extends React.Component {
 
     componentDidMount() {
         LanguageModel.getLanguageById(this.props.match.params.id)
-            .then((response) => response.json())
+            // .then((response) => response.json())
             .then((result) => {
                 // console.log(result);
                 this.setState({language: result});

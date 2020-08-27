@@ -1,10 +1,11 @@
-import React from 'react';
-import routes from '../../../config/routes';
+// import React from 'react';
+// import { Link } from 'react-router-dom';
+// import user from 
 
-function EditProfile() {
-    return (
-        <button><a href={routes.EditProfile}>Edit Profile</a></button>
-    )
-}
+// function EditProfile() {
+//     return (
+//         <button><Link to={`/profile/${user._id}/edit`}>Edit Profile</Link></button>
+//     )
+// }
 
-export default EditProfile;
+// export default EditProfile;

@@ -1,23 +1,33 @@
 import React from 'react';
-import routes from './config/routes';
+import Routes from './config/routes';
 import NavBar from './component/VisiblePages/NavBar/NavBar';
 // import 'materialize-css';
 //     import { Button, Card, Row, Col } from 'react-materialize';
-// import { withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 import './App.css';
 
-function App(props) {
-  // console.log(props)
+class App extends React.Component {
+  state = {
+    currentUser: localStorage.getItem("uid")
+  }
+
+  setCurrentUser(token) {
+    this.setState({currentUser: token})
+    localStorage.setItem("uid", token)
+  }
+
+  render() {
   return (
     <div className="App">
       <NavBar />
-       { routes }
+      <Routes setCurrentUser= {this.setCurrentUser} currentUser= {this.state.currentUser}/>
     </div>
   );
+  }
 }
 
-// function (Component, props) {
+// function withRouter(Component, props) {
 //   return function(props) {
 //     const routerProps = {
 //       history: () => {},
@@ -28,4 +38,4 @@ function App(props) {
 //   }
 // }
 
-export default (App);
+export default withRouter(App);

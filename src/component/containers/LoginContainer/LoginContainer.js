@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import UserModel from '../../../model/user';
 
 export default class LoginContainer extends Component {
@@ -22,29 +22,28 @@ export default class LoginContainer extends Component {
         });
     }
 
-    onSubmit(e) {
+    onSubmit = async (e) => {
         e.preventDefault();
-        UserModel.getUserById(this.state)
-        const user = {
-            username: this.state.username,
-            email: this.state.email,
-            password: this.state.password,
-        }
-
-    console.log(user);
-    
-    axios.post('http://localhost:5000/api/v1/users/login', user)
-            .then(res => console.log(res.data));
-    
-            this.setState({
+        try{
+            const data = await UserModel.login(this.state)
+            console.log(data);
+            if(data) {
+                this.props.setCurrentUser(data.data.token)
+                this.setState({
                 username: '',
                 email: '',
                 password: ''
             })
+
+            this.props.history.push("/profile")
+            }
+        } catch (err){console.log(err)}
+    
         }
 
 
     render() {
+        // console.log(this.props)
                 return (
                     <div>
                         <h1>Login!</h1>
