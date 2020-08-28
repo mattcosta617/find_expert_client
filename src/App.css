@@ -155,3 +155,28 @@ a:active {
 .btn2:active {
     background-color: #aaaaaa
 }
+
+.userListed {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    border: 2px solid black;
+    padding: 10px;
+    background-color: #E5E5E5;
+}
+
+.langs {
+    border: 2px solid black;
+    width: 400px;
+    height: 100px;
+    background-color: #E5E5E5;
+}
+
+.head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 25%px;
+    background-color: #E5E5E5;
+}

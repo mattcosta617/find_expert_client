@@ -6,7 +6,7 @@ import UserModel from '../../../model/user';
 
 class UserProfile extends React.Component {
     state = {
-        user: {}
+        user: []
     }
 
     // componentDidMount() {
@@ -21,29 +21,40 @@ class UserProfile extends React.Component {
     // }
 
     componentDidMount() {
-        console.log("above User Model");
-        UserModel.login(this.props.match.params.id)
+       
+        UserModel.getAllUsers()
         // .then((response) => response.json())
         .then((result) => {
                 console.log(result, "This is line 16**********")
                 this.setState({user: result})
             })
             .catch((err) => console.log(err))
-        }
+        };
 
+    
+
+    
     render() {
-        let user = this.props.match.params.id;
-        return (
-            <div className="main">
-                <h1>Hello, This is the user page</h1>
-                    <h3>{user.username}</h3>
-                    <h3>{user.email}</h3>
-                    <h3>{user._id}</h3>
-                    <button><Link to={`/projects`}>Projects</Link></button>
-            </div>
-        )
-    }
-}
+        let users = this.state.user;
+        const result = users.map((user) => {
+            return (
+                <Link to={`/profile/edit`}>
+                            <div className="userListed main">
+                                <h1>{user.username}</h1>
+                                <h4>{user.email}</h4>
+                            </div>
+                        </Link>
+                )
+            })
+    
+            return (
+                <div>
+                    {result}
+                </div>
+            )
+        }
+};
+
 
 
 

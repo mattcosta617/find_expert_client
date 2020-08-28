@@ -13,7 +13,7 @@ function Profile() {
     
         <div id="profile">
             <section className="main">
-                <h4>Expert Page</h4>
+                <h4>Profile Page</h4>
                 
                 <UserList />  
                

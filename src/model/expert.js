@@ -26,3 +26,7 @@ class ExpertModel {
 }
 
 export default ExpertModel;
+
+// first_name: String,
+//     last_name: String,
+//     bio: String,

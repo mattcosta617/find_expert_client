@@ -19,11 +19,10 @@ class UserList extends Component {
         let users = this.state.users;
         const result = users.map((user) => {
             return (
-            <Link to={`/profile/${user._id}`}>
-                        <div id="usersListed">
-                            <h2>{user.username}</h2>
+            <Link to={`/profile/new`}>
+                        <div className="userListed">
+                            <h1>{user.username}</h1>
                             <h4>{user.email}</h4>
-                            <p>{user._id}</p>
                         </div>
                     </Link>
             )

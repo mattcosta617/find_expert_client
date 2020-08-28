@@ -18,7 +18,12 @@ class LanguageListContainer extends React.Component {
   }
 
   render() {
-    return <LanguageList languages={this.state.languages} />;
+    return (
+    <div className="main">
+      <h1>Languages</h1>
+    <LanguageList languages={this.state.languages} />;
+    </div>
+    )
   }
 }
 

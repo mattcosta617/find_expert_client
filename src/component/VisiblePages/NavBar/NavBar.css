@@ -30,12 +30,10 @@ li {
 }
 
  .navClass {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: inline-block;
     margin-right: 10px;
     border: 2px solid black;
-    height: 200%;
+    font-size: 20px;
     width: 7em;
     text-align: center;
     background-color: rgb(216, 215, 215);
@@ -43,6 +41,7 @@ li {
 
 .rightNav {
     display: flex;
+    flex-direction: row;
     float: right;
     margin-right: 10px;
     height: 100%;

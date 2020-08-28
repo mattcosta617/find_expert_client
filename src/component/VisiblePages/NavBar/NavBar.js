@@ -13,7 +13,7 @@ function NavBar({ currentUser, logout }) {
             <div className="nav-wrapper">
             <NavLink to="/" className="brand-logo homeNavigation" activeClassName="active">Find An Expert</NavLink>
             <ul className="rightNav">
-                {/* <NavLink to="/experts"><li className="navClass">Experts</li></NavLink> */}
+                
                 <NavLink to="/languages" activeClassName="active"><li className="navClass">Languages</li></NavLink>
             {!currentUser && (
                 <div>
@@ -24,7 +24,7 @@ function NavBar({ currentUser, logout }) {
 
                 {currentUser && (
                 <div>
-                    <NavLink to={`/profile/${currentUser}`} activeClassName="active">
+                    <NavLink to={`/profile`} activeClassName="active">
                         <li className="navClass">Profile</li>
                     </NavLink>
                     

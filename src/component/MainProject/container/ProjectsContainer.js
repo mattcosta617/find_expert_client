@@ -24,7 +24,7 @@ class ProjectsContainer extends Component {
     });
   };
 
-createTodo = (project) => {
+createProject = (project) => {
     let newProject = {
         body: project,
         completed: false,
@@ -36,6 +36,34 @@ createTodo = (project) => {
         this.setState({ projects: projects });
     });
 };
+
+updateProject = project => {
+    const isUpdatedProject = upd => {
+        return upd._id === project._id;
+    };
+
+    ProjectModel.update(project)
+        .then((res) => {
+          let projects = this.state.projects;
+          projects.find(isUpdatedProject).body = project.body;
+          this.setState({ projects: projects });
+        });
+  };
+
+  render() {
+    return (
+      <div className="projectsComponent">
+        <CreateProjectForm
+          createProject={ this.createProject }
+        />
+        <Projects
+          projects={ this.state.projects }
+          updateProject={ this.updateProject } 
+          deleteProject={ this.deleteProject }
+          />
+      </div>
+    );
+  };
 
 render() {
   return (

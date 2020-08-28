@@ -8,9 +8,9 @@ function Language(props) {
 
     return(
         <div className="">
-            <section>
-                <h4>Language Page</h4>
-            </section>
+            <h1 className="head">Language Page</h1>
+              
+            
                 <LanguageList />
         </div>
     )
