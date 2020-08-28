@@ -1,58 +1,5 @@
 import React, { Component } from 'react';
 import UserModel from '../../..//model/user';
-import axios from 'axios';
-// import UserList from '../../Lists/UserList/UserList';
-
-
-// class NewUserContainer extends React.Component {
-//     state = {
-//         username: '',
-//         email: '',
-//         password: '',
-//     };
-
-//     onChange = (event) => {
-//         this.setState({
-//         [event.target.name]: event.target.value
-//         })
-//     };
-
-//     onSubmit = (event) => {
-//         event.preventDefault();
-//         console.log(this.state)
-//         UserModel.createUser(this.state)
-//         .then((result) => {
-//             console.log(result);
-//         })
-//         .catch ((err) => {
-//             console.log(err);
-//         })
-//     }
-
-//     render() {
-//         console.log('Render ran. state = ', this.state)
-//         return (
-//             <div className="signupForm">
-//                 <h1>Sign Up!</h1>
-//                 <form onSubmit={this.onSubmit}>
-//                     <div>
-//                         <input onChange={this.onChange} type="text" name="username" placeholder="username"
-//                         value={this.state.value} />
-//                     </div>
-//                     <div>
-//                         <input onChange={this.onChange} type="text" name="email" placeholder="email" value={this.state.value} />
-//                     </div>
-//                     <div>
-//                         <input onChange={this.onChange} type="text" name="password" placeholder="password" value={this.state.value} />
-//                     </div>
-//                     <button type="submit">Sign up</button>
-//                 </form>
-//             </div>
-//         )
-//     }
-// }
-
-// export default NewUserContainer;
 
 export default class NewUserContainer extends Component {
     constructor(props) {
