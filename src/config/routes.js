@@ -16,7 +16,7 @@ export default ({setCurrentUser, currentUser}) => {
     <Switch>
         <Route exact path="/login" render={() => <Login setCurrentUser={setCurrentUser} currentUser={currentUser}/>} />
         <Route exact path="/" render={() => <Home setCurrentUser={setCurrentUser} currentUser={currentUser} />}/>
-        <Route path="/profile/:id/edit" component={EditProfile} currentUser={currentUser} />
+        <Route path="/profile/edit" component={EditProfile} currentUser={currentUser} />
         <Route path="/profile/new" component={UserProfile} currentUser={currentUser} />
         <Route exact path="/profile" component={Profile} />
         <Route path="/languages/:id" component={Language} />

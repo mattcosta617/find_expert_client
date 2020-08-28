@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ProjectsContainer from '../../MainProject/container/ProjectsContainer';
 // import axios from 'axios';
 // import ProjectModel from '../../../model/user';
 // import ProjectForm from '../../containers/ProjectContainer/ProjectsContainer';
@@ -49,6 +50,7 @@ export default class EditProfile extends Component {
                     <div>
                         <section className="main"> 
                            <h1>Edit Profile Page</h1>
+                           <ProjectsContainer />
                         </section>
                     </div>
                 )
