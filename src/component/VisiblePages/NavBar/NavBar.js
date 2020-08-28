@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 // import 'materialize-css';
 // import { Button, Card, Row, Col } from 'react-materialize';
@@ -24,7 +24,7 @@ function NavBar({ currentUser, logout }) {
 
                 {currentUser && (
                 <div>
-                    <NavLink to="/profile" activeClassName="active">
+                    <NavLink to={`/profile/${currentUser}`} activeClassName="active">
                         <li className="navClass">Profile</li>
                     </NavLink>
                     

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import UserModel from '../../..//model/user';
-// import axios from 'axios';
+import axios from 'axios';
 // import UserList from '../../Lists/UserList/UserList';
 
 
@@ -79,14 +79,13 @@ export default class NewUserContainer extends Component {
         try{
             const data = await UserModel.createUser(this.state)
             if(data) {
-                this.props.setCurrentUser(data.data.token)
-            //     this.setState({
-            //     username: '',
-            //     email: '',
-            //     password: ''
-            // })
+                this.setState({
+                username: '',
+                email: '',
+                password: ''
+            })
             
-            this.props.history.push('/login');
+            this.props.history.push('/login')
             }
         } catch (err){console.log(err)}
     

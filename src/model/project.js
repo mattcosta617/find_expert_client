@@ -3,14 +3,21 @@ const url = `http://localhost:5000/api/v1/projects`
 
 class ProjectModel {
     static getAllProjects = () => {
-        return fetch(url)
-        .then((response) => response.json())
-    }
+        let request = axios.get(url);
+        return request;
+        };
 
     static getProjectById = (project) => {
         return fetch(`${url}/${project}`)
         .then((response) => response.json())
     }
+
+    static createProject = (project) => {
+        let request = axios.post(url, project);
+        return request;
+      };
+
+};
 
     // static createProject = (project) => {
     //     return fetch(url, {
@@ -20,11 +27,5 @@ class ProjectModel {
     //         },
     //         body: JSON.stringify(project)
     // .then((response) => response.json())
-
-
-    static createProject = (project) => {
-        return axios.post(url, project);
-    }
-}
 
 export default ProjectModel;

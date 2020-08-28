@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import axios from 'axios';
 // import ProjectModel from '../../../model/user';
-import ProjectForm from '../../Forms/ProjectForm';
+// import ProjectForm from '../../containers/ProjectContainer/ProjectsContainer';
 
 export default class EditProfile extends Component {
     // constructor(props) {
@@ -48,7 +48,7 @@ export default class EditProfile extends Component {
                 return (
                     <div>
                         <section className="main"> 
-                            <ProjectForm />
+                           <h1>Edit Profile Page</h1>
                         </section>
                     </div>
                 )

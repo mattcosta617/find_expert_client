@@ -17,7 +17,8 @@ class UserModel {
     }
 
     static verifyUser = (user) => {
-        return axios.post(`${url}verify`, user);
+        return fetch(`${url}verify`, user)
+        .then((response) => response.json())
     }
 }
 

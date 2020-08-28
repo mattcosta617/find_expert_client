@@ -9,7 +9,6 @@ class UserList extends Component {
     state = {
         users: [],
     }
-
     
     componentDidMount() {
     UserModel.getAllUsers()
