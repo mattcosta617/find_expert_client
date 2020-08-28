@@ -25,6 +25,7 @@ li {
 }
 
 .homeNavigation:hover {
+    color: black;
     background-color: #aaaaaa;
     box-shadow: 1px 3px #8d8c8c;
 }
@@ -55,5 +56,6 @@ li {
 }
 
 .navClass:hover {
-    background-color: #aaaaaa
+    background-color: #aaaaaa;
+    color: black;
 }

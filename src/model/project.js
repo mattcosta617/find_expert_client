@@ -27,6 +27,11 @@ class ProjectModel {
             return request;
           };
 
+          static update = (project) => {
+            let request = axios.put(`${url}/${project._id}`, project);
+            return request;
+          };
+
           static delete = (project) => {
             let request = axios.delete(`${url}/${project._id}`);
             return request;

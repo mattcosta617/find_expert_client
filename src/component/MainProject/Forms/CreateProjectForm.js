@@ -1,18 +1,24 @@
 import React, { Component } from 'react';
 
-class CreateProjectForm extends Component {
-  state = {
-    name: '',
-    project_url: '',
+class ProjectForm extends Component {
+  constructor() {
+    super();
+    this.state = {
+        project: {
+      name: '',
+      project_url: '',
+        }
+    };
   };
-  
-  onInputChange = (event) => {
+
+  onChange = (event) => {
     this.setState({
-        [event.target.name]: event.target.value
+      project: event.target.value,
     });
   };
   
-  onFormSubmit = (event) => {
+  
+  onSubmit = (event) => {
     event.preventDefault();
     let project = this.state.project;
     this.props.createProject(project);
@@ -20,28 +26,28 @@ class CreateProjectForm extends Component {
       project: '',
     });
   };
-  
+
   render() {
     return (
-      <div>
-        <form onSubmit={this.onFormSubmit} id="newProjectForm">
-          <input  
-            onChange={this.onInputChange} 
-            type="text" id="newProjectDescription" name="name"
-            placeholder="Project Name" 
-            value={this.state.value}
-          />
-          <input  
-            onChange={this.onInputChange} 
-            type="text" id="newURL" 
-            placeholder="Project URL" name="project_url"
-            value={this.state.value}
-          />
-          <button type="submit" id="addProject" className="btn">Add Project</button>
+      <div style={this.props.style} className='projectForm'>
+        <form onSubmit={ this.onSubmit }>
+          <input
+            autoFocus={this.props.autoFocus}
+            onChange={ this.onChange }
+            placeholder='Project Name'
+            type='text'
+            value={this.state.project.name} />
+            <input
+            autoFocus={this.props.state}
+            onChange={ this.onChange }
+            placeholder='Project url'
+            type='text'
+            value={this.state.project.project_url} />
+          <button type='submit'>Save</button>
         </form>
       </div>
     );
   };
 };
 
-export default CreateProjectForm;
+export default ProjectForm;

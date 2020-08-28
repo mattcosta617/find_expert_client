@@ -23,11 +23,11 @@ class Language extends React.Component {
     render() {
         let language = this.state.language;
         return (
-            <div>
-                <section className="main">
-                <h1>Hello, This is the language page</h1>
+            <div className="align">
+                <section >
+                <h1 className="head">Hello, This is the language page</h1>
                     <h3>{language.language}</h3>
-                    
+                    <h3>{language._id}</h3>
                     <div>
                     <h2><UserList /></h2>
                     </div>

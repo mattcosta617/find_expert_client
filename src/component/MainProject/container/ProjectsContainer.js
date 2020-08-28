@@ -8,7 +8,10 @@ class ProjectsContainer extends Component {
   constructor() {
     super();
     this.state = {
-      projects: [],
+      projects: [{
+          name: "",
+          project_url: "",
+      }],
     };
   };
   
@@ -24,7 +27,7 @@ class ProjectsContainer extends Component {
     });
   };
 
-createProject = (project) => {
+  createProject = (project) => {
     let newProject = {
         body: project,
         completed: false,
@@ -34,8 +37,18 @@ createProject = (project) => {
         let projects = this.state.projects;
         projects.push(res.data);
         this.setState({ projects: projects });
-    });
-};
+     });
+    };
+
+    deleteProject = (project) => {
+        ProjectModel.delete(project).then((res) => {
+            let projects = this.state.projects.filter((project) => {
+              return project._id !== res.data._id;
+            });
+            this.setState({projects});
+        });
+    };
+    
 
 updateProject = project => {
     const isUpdatedProject = upd => {
@@ -64,18 +77,6 @@ updateProject = project => {
       </div>
     );
   };
-
-render() {
-  return (
-    <div className="main">
-      <CreateProjectForm
-        createProject={this.createProject} />
-
-      <Projects
-        projects={this.state.projects} />
-    </div>
-  );
-};
  
 };
 

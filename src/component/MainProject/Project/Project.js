@@ -17,10 +17,13 @@ class Project extends Component {
     ? this.setState({ formStyle: {display: 'none'} })
     : this.setState({ formStyle: {display:'block'} });
   };
+  
 
   deleteClickedProject = () => {
     this.props.deleteProject(this.props.project);
   };
+
+  
   
   render() {
     return (
@@ -31,12 +34,12 @@ class Project extends Component {
               <span
                 className='edit' 
                 onClick={this.toggleBodyForm}>
-                <button className="btn2">Edit</button>
+                <button className="btn3">Edit</button>
               </span>
               <span
                 className='remove' 
                 onClick={this.deleteClickedProject}>
-                <button className="btn2">Remove</button>
+                <button className="btn3">Remove</button>
               </span>
             </div>
             <ProjectForm 
